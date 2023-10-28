@@ -2,26 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  transition-duration: 0.7s;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.header-active {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  position: fixed;
+  box-shadow: 1px 1px 5px gray;
+  width: 100%;
+  transition-duration: 0.7s;
+}
+
+.Link::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid black;
+  padding: 0.2rem;
+  transform: scaleX(0);
+}
+
+.Link:hover:after {
+  transform: scaleX(0.5);
+  transition: 0.2s linear;
+}
+
+@media (min-width: 1280px) {
+  .header {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
+  .header-active {
+    padding-left: 160px;
+    padding-right: 160px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media (max-width: 1280px) {
+  .Link::after {
+    border-bottom: none;
+  }
 }
