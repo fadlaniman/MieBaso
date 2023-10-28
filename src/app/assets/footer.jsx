@@ -57,9 +57,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="grid mx-5 border-t border-black p-7 xl:mx-40">
-        <h5 className="text-center text-xs text-black font-medium">
+        <p className="text-center text-xs text-black font-medium">
           ©2023 MieBaso.<span className="uppercase"> all right reserved</span>
-        </h5>
+        </p>
       </div>
     </div>
   );

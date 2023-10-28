@@ -10,6 +10,18 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="../../public/images/logo.png" />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-ECKZVLJYT9"
+        ></script>
+        <script>
+          {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '$G-ECKZVLJYT9');`}
+        </script>
       </head>
       <body>{children} </body>
     </html>
