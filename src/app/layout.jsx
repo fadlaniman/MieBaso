@@ -6,13 +6,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const currentScroll = () => {
-    if (scrollY > 0) {
-      alert("berhasil");
-    }
-  };
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="../../public/images/logo.png" />
+      </head>
       <body>{children} </body>
     </html>
   );

@@ -21,7 +21,7 @@ export default function Navbar() {
   });
 
   return (
-    <header className={navStatic ? "header-active" : "header"}>
+    <div className={navStatic ? "header-active" : "header"}>
       <div className="flex space-x-1">
         <div className="my-auto">
           <Image src={Logo} alt={Logo} height={40} width={40} />
@@ -75,6 +75,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 }

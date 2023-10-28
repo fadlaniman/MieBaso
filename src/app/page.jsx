@@ -1,10 +1,12 @@
+"use client";
+
 import Navbar from "./assets/navbar";
 import Footer from "./assets/footer";
 import Image from "next/image";
 import Order from "../../public/images/order.png";
 import Delivery from "../../public/images/delivery.png";
 import Courier from "../../public/images/courier.png";
-import product from "../../public/images/product.png";
+import product from "../../public/images/product.jpg";
 import Link from "next/link";
 import { RxExit } from "react-icons/rx";
 
@@ -35,22 +37,23 @@ export default function Home() {
       file: product,
     },
   ];
+
   return (
-    <main>
-      <div>
+    <div>
+      <header>
         <Navbar />
-      </div>
+      </header>
       <div>
         <div className="bg-hero-pattern bg-cover bg-fixed px-7 xl:px-40 py-28 xl:py-40">
           <div className="grid gap-7">
-            <h3 className="text-3xl font-bold xl:text-5xl xl:w-1/3 font-serif">
+            <h1 className="text-3xl font-bold xl:text-5xl xl:w-1/3 font-serif">
               Be The Fastest In Delivery Your
               <span className="text-blue-600"> Food </span>
-            </h3>
-            <h5 className=" text-stone-800 text-sm w-2/3 xl:w-1/4 xl:text-base font-medium">
+            </h1>
+            <h2 className=" text-stone-800 text-sm w-2/3 xl:w-1/4 xl:text-base font-medium">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laboriosam recusandae necessitatibus asperiores dolores vitae.
-            </h5>
+            </h2>
             <Link
               href=""
               className="flex gap-2 px-3 py-2 bg-white rounded-full w-max"
@@ -60,25 +63,25 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="grid px-10 py-20 space-y-16">
+        <section className="grid px-10 py-20 space-y-16">
           <div>
             {/* Section-1 */}
             <div className="">
               <div className="grid text-center font-medium">
-                <h5 className="text-blue-500 text-sm xl:text-base">
+                <h3 className="text-blue-300 text-sm xl:text-base">
                   How it works
-                </h5>
+                </h3>
                 <h4 className="font-bold xl:text-lg">What We Serve</h4>
-                <h6 className="text-stone-700 text-sm py-3 xl:text-base">
+                <p className="text-stone-700 text-sm py-3 xl:text-base">
                   Product Quality Is Our Priority, And Always Guarantees Halal
                   And Safety Until Is In Your Hands.
-                </h6>
+                </p>
               </div>
             </div>
             <div className="grid py-7 space-y-7 xl:flex xl:justify-evenly">
               <div className="grid text-center gap-3">
                 <Image src={Order} alt={Order} className="w-1/3 m-auto " />
-                <h6 className="font-bold">Easy To Order</h6>
+                <h4 className="font-bold">Easy To Order</h4>
                 <p className="text-sm text-stone-700 font-medium">
                   You only order through the app
                 </p>
@@ -89,14 +92,14 @@ export default function Home() {
                   alt={Delivery}
                   className="w-1/3 m-auto "
                 />
-                <h6 className="font-bold">Fastest Delivery</h6>
+                <h4 className="font-bold">Fastest Delivery</h4>
                 <p className="text-sm text-stone-700 font-medium">
                   Delivery will be on time
                 </p>
               </div>
               <div className="grid text-center gap-3">
                 <Image src={Courier} alt={Courier} className="w-1/3 m-auto" />
-                <h6 className="font-bold">Best Quality</h6>
+                <h4 className="font-bold">Best Quality</h4>
                 <p className="text-sm text-stone-700 font-medium">
                   The best quality of food for you
                 </p>
@@ -106,12 +109,12 @@ export default function Home() {
           {/* Section-2 */}
           <div>
             <div className="grid font-medium text-center">
-              <h5 className="text-blue-500 text-sm xl:text-base">Our menu</h5>
-              <h4 className="font-bold xl:text-lg">Our Popular Menu</h4>
-              <h6 className="text-stone-700 text-sm py-3 xl:text-base">
+              <h1 className="text-blue-500 text-sm xl:text-base">Our menu</h1>
+              <h3 className="font-bold xl:text-lg">Our Popular Menu</h3>
+              <p className="text-stone-700 text-sm py-3 xl:text-base">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
                 fugit quam aut laudantium in aliquam totam.
-              </h6>
+              </p>
             </div>
           </div>
           {/* Section-3 */}
@@ -127,23 +130,26 @@ export default function Home() {
                 </div>
                 <div className="grid space-y-2 text-sm py-3 px-5">
                   <h3 className="font-bold">{val.nama}</h3>
-                  <h5 className="font-medium text-stone-700">
-                    {val.deskripsi}
-                  </h5>
+                  <p className="font-medium text-stone-700">{val.deskripsi}</p>
                 </div>
                 <div className="px-5">
-                  <h2 className="font-bold">Rp. {val.harga}</h2>
+                  <span className="font-bold">
+                    {new Intl.NumberFormat("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                    }).format(val.harga)}
+                  </span>
                 </div>
               </div>
             ))}
           </div>
-        </div>
+        </section>
         {/* Section-4 */}
         <div className="mx-5 my-12 bg-banner-pattern bg-cover rounded-md xl:mx-40">
           <div className="grid bg-black bg-opacity-70 gap-5 px-20 py-7 rounded-md xl:py-20 xl:gap-10">
-            <h5 className="text-white font-bold text-center xl:text-3xl xl:w-1/3 mx-auto">
+            <h3 className="text-white font-bold text-center xl:text-3xl xl:w-1/3 mx-auto">
               Join our member and get discount up to 50%
-            </h5>
+            </h3>
             <Link
               href=""
               className="flex gap-2 px-5 py-2 bg-white rounded-full w-max mx-auto"
@@ -157,6 +163,6 @@ export default function Home() {
       <div>
         <Footer />
       </div>
-    </main>
+    </div>
   );
 }
