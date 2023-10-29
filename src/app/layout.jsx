@@ -1,6 +1,4 @@
 import "./globals.css";
-import Head from "next/head";
-import ".env";
 
 export const metadata = {
   title: "MieBaso",
@@ -10,11 +8,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <link rel="icon" href="../../public/images/logo.png" />
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          src="https://www.googletagmanager.com/gtag/js?id=G-ECKZVLJYT9"
         ></script>
         <script
           dangerouslySetInnerHTML={{
@@ -22,10 +20,10 @@ export default function RootLayout({ children }) {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});`,
+  gtag('config', 'G-ECKZVLJYT9');`,
           }}
         />
-      </Head>
+      </head>
       <body>{children} </body>
     </html>
   );
