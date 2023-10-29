@@ -1,4 +1,5 @@
 import "./globals.css";
+import Head from "next/head";
 
 export const metadata = {
   title: "MieBaso",
@@ -8,21 +9,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <link rel="icon" href="../../public/images/logo.png" />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-ECKZVLJYT9"
         ></script>
-        <script>
-          {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        gtag('config', '$G-ECKZVLJYT9');`}
-        </script>
-      </head>
+  gtag('config', 'G-ECKZVLJYT9');`,
+          }}
+        />
+      </Head>
       <body>{children} </body>
     </html>
   );

@@ -9,7 +9,6 @@ import Courier from "../../public/images/courier.png";
 import product from "../../public/images/product.jpg";
 import Link from "next/link";
 import { RxExit } from "react-icons/rx";
-import Script from "next/script";
 
 export default function Home() {
   const Product = [
