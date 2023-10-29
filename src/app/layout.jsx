@@ -1,5 +1,6 @@
 import "./globals.css";
 import Head from "next/head";
+import ".env";
 
 export const metadata = {
   title: "MieBaso",
@@ -13,7 +14,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="../../public/images/logo.png" />
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-ECKZVLJYT9"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         ></script>
         <script
           dangerouslySetInnerHTML={{
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-ECKZVLJYT9');`,
+  gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});`,
           }}
         />
       </Head>
