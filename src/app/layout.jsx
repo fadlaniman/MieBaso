@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
 
   gtag('config', 'G-ECKZVLJYT9');`,
           }}
-        />
+        ></script>
       </head>
       <body>{children} </body>
     </html>
