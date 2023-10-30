@@ -29,7 +29,7 @@ export default function Navbar() {
         <h1 className="my-auto font-playpen-text text-lg">MieBaso</h1>
       </div>
       <div>
-        <div className="my-auto xl:hidden cursor-pointer">
+        <div className="xl:hidden cursor-pointer my-auto">
           <HiMenuAlt4
             onClick={() => {
               setToggle(!toggle);
@@ -44,23 +44,23 @@ export default function Navbar() {
               : "hidden xl:flex gap-7 text-sm font-medium text-black"
           }
         >
-          <Link className="Link my-auto p-2" href="">
+          <Link className="Link" href="/">
             Home
           </Link>
-          <Link className="Link my-auto p-2" href="">
+          <Link className="Link" href="/menu">
             Menu
           </Link>
-          <Link className="Link my-auto p-2 " href="">
+          <Link className="Link" href="">
             How it Works
           </Link>
-          <Link className="Link my-auto p-2 " href="">
+          <Link className="Link" href="">
             About
           </Link>
-          <Link className="Link my-auto p-2 " href="">
+          <Link className="Link" href="">
             Contact
           </Link>
           <div className="grid my-auto">
-            <Link href="">
+            <Link href="/">
               <FaShoppingCart className="text-xl" />
             </Link>
           </div>

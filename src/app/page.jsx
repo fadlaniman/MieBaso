@@ -10,34 +10,33 @@ import product from "../../public/images/product.jpg";
 import Link from "next/link";
 import { RxExit } from "react-icons/rx";
 
+const Product = [
+  {
+    nama: "Baso Urat",
+    deskripsi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    harga: 12000,
+    file: product,
+  },
+  {
+    nama: "Baso Cincang",
+    deskripsi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    harga: 15000,
+    file: product,
+  },
+  {
+    nama: "Baso Beranak",
+    deskripsi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    harga: 30000,
+    file: product,
+  },
+  {
+    nama: "Mie Ayam Baso",
+    deskripsi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    harga: 13000,
+    file: product,
+  },
+];
 export default function Home() {
-  const Product = [
-    {
-      nama: "Baso Urat",
-      deskripsi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      harga: 12000,
-      file: product,
-    },
-    {
-      nama: "Baso Cincang",
-      deskripsi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      harga: 15000,
-      file: product,
-    },
-    {
-      nama: "Baso Beranak",
-      deskripsi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      harga: 30000,
-      file: product,
-    },
-    {
-      nama: "Mie Ayam Baso",
-      deskripsi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      harga: 13000,
-      file: product,
-    },
-  ];
-
   return (
     <div>
       <header>
@@ -50,7 +49,7 @@ export default function Home() {
               Be The Fastest In Delivery Your
               <span className="text-blue-600"> Food </span>
             </h1>
-            <h2 className=" text-stone-800 text-sm w-2/3 xl:w-1/4 xl:text-base font-medium">
+            <h2 className=" text-stone-800 text-sm xl:w-1/3 xl:text-base font-medium">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laboriosam recusandae necessitatibus asperiores dolores vitae.
             </h2>
@@ -63,7 +62,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <section className="grid px-10 py-20 space-y-16">
+        <section className="grid p-10 space-y-16">
           <div>
             {/* Section-1 */}
             <div className="">
@@ -109,7 +108,7 @@ export default function Home() {
           {/* Section-2 */}
           <div>
             <div className="grid font-medium text-center">
-              <h1 className="text-blue-500 text-sm xl:text-base">Our menu</h1>
+              <h1 className="text-blue-300 text-sm xl:text-base">Our menu</h1>
               <h3 className="font-bold xl:text-lg">Our Popular Menu</h3>
               <p className="text-stone-700 text-sm py-3 xl:text-base">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
@@ -128,11 +127,11 @@ export default function Home() {
                     className="w-1/2 mx-auto"
                   />
                 </div>
-                <div className="grid space-y-2 text-sm py-3 px-5">
+                <div className="grid space-y-2 text-sm py-3 px-7">
                   <h3 className="font-bold">{val.nama}</h3>
                   <p className="font-medium text-stone-700">{val.deskripsi}</p>
                 </div>
-                <div className="px-5">
+                <div className="px-7">
                   <span className="font-bold">
                     {new Intl.NumberFormat("id-ID", {
                       style: "currency",

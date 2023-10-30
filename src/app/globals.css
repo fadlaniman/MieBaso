@@ -23,17 +23,21 @@
   transition-duration: 0.7s;
 }
 
+.Link {
+  padding: 8px;
+}
+
 .Link::after {
   content: "";
   display: block;
   border-bottom: 2px solid black;
-  padding: 0.2rem;
   transform: scaleX(0);
+  padding: 0.2rem;
 }
 
 .Link:hover:after {
   transform: scaleX(0.5);
-  transition: 0.2s linear;
+  transition: 0.3s linear;
 }
 
 @media (min-width: 1280px) {
