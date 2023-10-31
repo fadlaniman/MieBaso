@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="my-auto">
           <Image src={Logo} alt={Logo} height={40} width={40} />
         </div>
-        <h1 className="my-auto font-playpen-text text-lg">MieBaso</h1>
+        <h1 className="my-auto font-playpen-text text-lg">Mie Baso Japra</h1>
       </div>
       <div>
         <div className="xl:hidden cursor-pointer my-auto">
@@ -60,7 +60,7 @@ export default function Navbar() {
             Contact
           </Link>
           <div className="grid my-auto">
-            <Link href="/">
+            <Link href="/car">
               <FaShoppingCart className="text-xl" />
             </Link>
           </div>

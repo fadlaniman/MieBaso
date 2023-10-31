@@ -6,34 +6,37 @@ import Image from "next/image";
 import Order from "../../public/images/order.png";
 import Delivery from "../../public/images/delivery.png";
 import Courier from "../../public/images/courier.png";
-import product from "../../public/images/product.jpg";
+import product_1 from "../../public/images/product-1.jpeg";
+import product_2 from "../../public/images/product-2.jpeg";
+import product_3 from "../../public/images/product-3.jpeg";
+import product_4 from "../../public/images/product-4.jpeg";
 import Link from "next/link";
 import { RxExit } from "react-icons/rx";
 
 const Product = [
   {
-    nama: "Baso Urat",
-    deskripsi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    harga: 12000,
-    file: product,
+    nama: `Mie Baso Cincang`,
+    deskripsi: `Baso besar cincang + Baso halus kecil 3 + Mie campur`,
+    harga: 20000,
+    file: product_1,
   },
   {
-    nama: "Baso Cincang",
-    deskripsi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    harga: 15000,
-    file: product,
+    nama: `Mie Baso Cincang + Baso Urat`,
+    deskripsi: `Baso besar 2 + Baso kecil 1 + Mie campur`,
+    harga: 26000,
+    file: product_2,
   },
   {
-    nama: "Baso Beranak",
-    deskripsi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    harga: 30000,
-    file: product,
+    nama: `Mie Ayam Baso Cincang`,
+    deskripsi: `Mie ayam + Baso besar cincang + Baso kecil`,
+    harga: 24000,
+    file: product_3,
   },
   {
-    nama: "Mie Ayam Baso",
-    deskripsi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    harga: 13000,
-    file: product,
+    nama: `Mie Ayam Baso Urat`,
+    deskripsi: `Baso Besar urat + Baso kecil 3 + Mie campur`,
+    harga: 20000,
+    file: product_4,
   },
 ];
 export default function Home() {
@@ -50,8 +53,8 @@ export default function Home() {
               <span className="text-blue-600"> Food </span>
             </h1>
             <h2 className=" text-stone-800 text-sm xl:w-1/3 xl:text-base font-medium">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam recusandae necessitatibus asperiores dolores vitae.
+              Selamat datang di Baso Japra, tempat di mana cita rasa lezat dan
+              kualitas berkumpul dalam setiap gigitan!
             </h2>
             <Link
               href=""
@@ -146,7 +149,7 @@ export default function Home() {
         {/* Section-4 */}
         <div className="mx-5 my-12 bg-banner-pattern bg-cover rounded-md xl:mx-40">
           <div className="grid bg-black bg-opacity-70 gap-5 px-20 py-7 rounded-md xl:py-20 xl:gap-10">
-            <h3 className="text-white font-bold text-center xl:text-3xl xl:w-1/3 mx-auto">
+            <h3 className="text-white font-bold text-center xl:text-2xl mx-auto">
               Join our member and get discount up to 50%
             </h3>
             <Link

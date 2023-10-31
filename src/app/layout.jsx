@@ -1,5 +1,4 @@
 import "./globals.css";
-import Logo from "../../public/images/logo.png";
 
 export const metadata = {
   title: "MieBaso",
