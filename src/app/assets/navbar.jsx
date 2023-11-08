@@ -15,7 +15,7 @@ export default function Navbar() {
     window.addEventListener("scroll", () => {
       const currentScroll = window.scrollY;
       {
-        currentScroll > 0 ? setNavStatic(true) : setNavStatic(false);
+        currentScroll > 50 ? setNavStatic(true) : setNavStatic(false);
       }
     });
   });
@@ -24,43 +24,46 @@ export default function Navbar() {
     <div className={navStatic ? "header-active" : "header"}>
       <div className="flex space-x-1">
         <div className="my-auto">
-          <Image src={Logo} alt={Logo} height={40} width={40} />
+          <Image
+            src={Logo}
+            alt={Logo}
+            height={500}
+            width={500}
+            className="w-10"
+          />
         </div>
-        <h1 className="my-auto font-playpen-text text-lg">Mie Baso Japra</h1>
+        <h1 className="my-auto font-libre-baskerville text-lg">MieBaso</h1>
       </div>
-      <div>
-        <div className="xl:hidden cursor-pointer my-auto">
+      <div className="my-auto">
+        <div className="xl:hidden cursor-pointer">
           <HiMenuAlt4
             onClick={() => {
               setToggle(!toggle);
             }}
-            className="text-xl"
+            className="text-2xl my-auto"
           />
         </div>
         <div
           className={
             toggle
-              ? "p-7 xl:gap-7 gap-5 grid fixed top-0 left-0 m-2 -translate-x-0 duration-500 bg-blue-600 text-white font-medium text-sm xl:flex xl:static xl:bg-transparent xl:text-black xl:p-0"
-              : "hidden xl:flex gap-7 text-sm font-medium text-black"
+              ? "p-7 gap-5 grid fixed top-0 left-0 m-2 -translate-x-0 duration-500 bg-blue-600 text-white font-poppins-text text-sm xl:flex xl:static xl:bg-transparent xl:text-black xl:p-0"
+              : "hidden xl:flex gap-5 text-sm font-monsterrat-text text-black"
           }
         >
           <Link className="Link" href="/">
             Home
           </Link>
-          <Link className="Link" href="/menu">
+          <Link className="Link" href="/">
             Menu
           </Link>
           <Link className="Link" href="">
             How it Works
           </Link>
           <Link className="Link" href="">
-            About
-          </Link>
-          <Link className="Link" href="">
             Contact
           </Link>
           <div className="grid my-auto">
-            <Link href="/car">
+            <Link href="/">
               <FaShoppingCart className="text-xl" />
             </Link>
           </div>

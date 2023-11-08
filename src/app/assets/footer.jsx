@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Logo from "../../../public/images/logo.png";
 import Link from "next/link";
 import { BsInstagram, BsTwitter, BsFacebook } from "react-icons/bs";
 
@@ -10,16 +9,19 @@ export default function Footer() {
         <div className="grid space-y-5">
           <div className="flex space-x-1">
             <div className="my-auto">
-              <Image src={Logo} alt={Logo} height={40} width={40} />
+              <Image
+                className="w-10"
+                src="/images/logo.png"
+                alt="/images/logo.png"
+                height={500}
+                width={500}
+              />
             </div>
-            <h1 className="my-auto font-playpen-text text-lg">
-              Mie Baso Japra
-            </h1>
+            <h1 className="my-auto font-libre-baskerville text-lg">MieBaso</h1>
           </div>
           <div>
             <p className="text-sm font-medium italic xl:w-1/2 w-2/3">
-              Jl. Sukapura RT.01/RW.06, Sukapura, Kec. Dayeuhkolot, Kabupaten
-              Bandung, Jawa Barat 40267
+              Kota Pematangsiantar
             </p>
           </div>
           <div className="flex gap-3">
@@ -61,7 +63,7 @@ export default function Footer() {
       </div>
       <div className="grid mx-5 border-t border-black p-7 xl:mx-40">
         <p className="text-center text-xs text-black font-medium">
-          ©2023 MieBasoJapra.
+          ©2023 MieBaso.
           <span className="uppercase"> all right reserved</span>
         </p>
       </div>
